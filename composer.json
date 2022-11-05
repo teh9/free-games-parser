@@ -1,0 +1,11 @@
+{
+    "require": {
+        "vkcom/vk-php-sdk": "^5.101",
+        "telegram-bot/api": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "src/"
+        }
+    }
+}
