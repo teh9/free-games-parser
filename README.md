@@ -5,7 +5,13 @@ The community also announces free games in EpicGames, GOG.
 
 ## Installation & usage
 
-Clone repository or download the source code, in **index.php** need to set group id
+Clone repository or download the source code execute command
+```
+composer install
+```
+
+In **index.php** need to set group id
+
 ```php
 $getGame = new Handler();
 $getGame->groupId = 'GROUP_OR_USER_ID'; // Group id or user id, to get wall posts.
