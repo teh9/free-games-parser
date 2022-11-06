@@ -1,6 +1,6 @@
 <?php
 
-namespace app\service;
+namespace app\Service;
 
 use app\interfaces\File;
 

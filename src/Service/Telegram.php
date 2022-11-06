@@ -1,10 +1,8 @@
 <?php
 
-namespace app\service;
+namespace app\Service;
 
-use TelegramBot\Api\Exception;
-use TelegramBot\Api\InvalidArgumentException;
-use TelegramBot\Api\Types\Message;
+use Teh9\TelegramPhpSdk\Telegram\Exceptions\TelegramClientException;
 
 class Telegram extends Social
 {
@@ -14,19 +12,16 @@ class Telegram extends Social
     private string $botApiToken = 'TELEGRAM_BOT_API_TOKEN';
 
     /**
-     * @throws Exception
-     * @throws InvalidArgumentException
+     * @param $chatId
+     * @param string $messageText
+     * @return array
+     * @throws TelegramClientException
      */
-    public function sendNotification ($chatId, string $messageText): Message
+    public function sendNotification ($chatId, string $messageText): array
     {
-        return $this->telegramClient()->sendMessage(implode(',', $chatId), $messageText);
-    }
-
-    /**
-     * @return string
-     */
-    public function getBotToken(): string
-    {
-        return $this->botApiToken;
+        return $this->telegramClient()->messages()->send($this->botApiToken, [
+            'chat_id' => implode(',', $chatId),
+            'text'    => $messageText
+        ]);
     }
 }

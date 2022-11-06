@@ -4,40 +4,34 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ae46f0cd77f89afd38ca4b323e7ca7d",
+    "content-hash": "3c1cdd8eb44aaa6747c77da504c05262",
     "packages": [
         {
-            "name": "telegram-bot/api",
-            "version": "v2.3.24",
+            "name": "teh9/telegram-php-sdk",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TelegramBot/Api.git",
-                "reference": "579f64d0ffe7f21d1f61cb8734e297686b286bf7"
+                "url": "https://github.com/teh9/telegram-php-sdk.git",
+                "reference": "7904d4632495f148ae3af5a7d341b8b5b4bb8ac9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TelegramBot/Api/zipball/579f64d0ffe7f21d1f61cb8734e297686b286bf7",
-                "reference": "579f64d0ffe7f21d1f61cb8734e297686b286bf7",
+                "url": "https://api.github.com/repos/teh9/telegram-php-sdk/zipball/7904d4632495f148ae3af5a7d341b8b5b4bb8ac9",
+                "reference": "7904d4632495f148ae3af5a7d341b8b5b4bb8ac9",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "php": ">=5.5.0"
+                "ext-json": "*",
+                "php": ">=7.4"
             },
             "require-dev": {
-                "codeception/codeception": "*",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "2.*"
+                "phpunit/phpunit": "^9"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "TelegramBot\\Api\\": "src"
+                    "Teh9\\TelegramPhpSdk\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -46,25 +40,22 @@
             ],
             "authors": [
                 {
-                    "name": "Ilya Gusev",
-                    "email": "mail@igusev.ru",
-                    "homepage": "https://php-cat.com",
-                    "role": "Developer"
+                    "name": "teh9",
+                    "email": "tengizs.gusevs@gmail.com"
                 }
             ],
-            "description": "PHP Wrapper for Telegram Bot API",
-            "homepage": "https://github.com/TelegramBot/Api",
+            "description": "Telegram PHP SDK",
             "keywords": [
+                "api",
                 "bot",
-                "bot api",
                 "php",
                 "telegram"
             ],
             "support": {
-                "issues": "https://github.com/TelegramBot/Api/issues",
-                "source": "https://github.com/TelegramBot/Api/tree/v2.3.24"
+                "issues": "https://github.com/teh9/telegram-php-sdk/issues",
+                "source": "https://github.com/teh9/telegram-php-sdk/tree/v1.0.1"
             },
-            "time": "2021-12-06T13:05:34+00:00"
+            "time": "2022-11-06T22:39:32+00:00"
         },
         {
             "name": "vkcom/vk-php-sdk",

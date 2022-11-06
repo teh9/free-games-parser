@@ -1,9 +1,8 @@
 <?php
 
-namespace app\service;
+namespace app\Service;
 
-use TelegramBot\Api\Exception;
-use TelegramBot\Api\InvalidArgumentException;
+use Teh9\TelegramPhpSdk\Telegram\Exceptions\TelegramClientException;
 use VK\Exceptions\Api\VKApiBlockedException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
@@ -33,11 +32,9 @@ class Handler extends Social
 
     /**
      * @return bool
-     * @throws Exception
-     * @throws InvalidArgumentException
      * @throws VKApiBlockedException
      * @throws VKApiException
-     * @throws VKClientException
+     * @throws VKClientException|TelegramClientException
      */
     public function start (): bool
     {
@@ -58,13 +55,12 @@ class Handler extends Social
     /**
      * @param array $post
      * @return void
-     * @throws Exception
-     * @throws InvalidArgumentException
+     * @throws TelegramClientException
      */
     private function notify (array $post): void
     {
         $this->getTelegram()->sendNotification(
-            [1] // USER CHAT ID (may be array like [1, 2, 3])
+            [0] // USER CHAT ID (may be array like [1, 2, 3])
             , $post['text']);
     }
 

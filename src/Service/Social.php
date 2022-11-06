@@ -1,8 +1,8 @@
 <?php
 
-namespace app\service;
+namespace app\Service;
 
-use TelegramBot\Api\BotApi;
+use Teh9\TelegramPhpSdk\Telegram\Client\TelegramApiClient;
 use VK\Client\VKApiClient;
 
 abstract class Social
@@ -42,11 +42,11 @@ abstract class Social
     }
 
     /**
-     * @return BotApi
+     * @return TelegramApiClient
      */
-    protected function telegramClient ()
+    protected function telegramClient (): TelegramApiClient
     {
-        return new BotApi($this->getTelegram()->getBotToken());
+        return new TelegramApiClient();
     }
 
     /**

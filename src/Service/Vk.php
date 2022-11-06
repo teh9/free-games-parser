@@ -1,6 +1,6 @@
 <?php
 
-namespace app\service;
+namespace app\Service;
 
 use VK\Exceptions\Api\VKApiBlockedException;
 use VK\Exceptions\VKApiException;
